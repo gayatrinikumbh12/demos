@@ -1,0 +1,23 @@
+
+C:\Users\gnikumbh>c:
+
+C:\Users\gnikumbh>cd..
+
+C:\Users>cd C:\Users\gnikumbh\Desktop\Training Material\Module-04
+
+C:\Users\gnikumbh\Desktop\Training Material\Module-04>java -jar selenium-server-standalone-3.4.0.jar -role hub -port 4445
+10:39:53.320 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
+10:39:53.320 INFO - Launching Selenium Grid hub
+2019-02-15 10:39:54.195:INFO::main: Logging initialized @1197ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:39:54.211 INFO - Will listen on 4445
+2019-02-15 10:39:54.273:INFO:osjs.Server:main: jetty-9.4.3.v20170317
+2019-02-15 10:39:54.305:INFO:osjs.session:main: DefaultSessionIdManager workerName=node0
+2019-02-15 10:39:54.305:INFO:osjs.session:main: No SessionScavenger set, using defaults
+2019-02-15 10:39:54.305:INFO:osjs.session:main: Scavenging every 600000ms
+2019-02-15 10:39:54.320:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@1cab0bfb{/,null,AVAILABLE}
+2019-02-15 10:39:54.351:INFO:osjs.AbstractConnector:main: Started ServerConnector@74414a50{HTTP/1.1,[http/1.1]}{0.0.0.0:4445}
+2019-02-15 10:39:54.351:INFO:osjs.Server:main: Started @1348ms
+10:39:54.351 INFO - Nodes should register to http://10.246.92.87:4445/grid/register/
+10:39:54.351 INFO - Selenium Grid hub is up and running
+10:54:52.529 INFO - Registered a node http://10.246.92.87:5555
+

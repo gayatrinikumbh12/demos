@@ -1,0 +1,162 @@
+package com.cg.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class Login {
+
+	WebDriver driver;
+	public Login(WebDriver driver)
+	{
+		this.driver=driver;
+	}
+	@FindBy(name="userName")
+	WebElement UserName;
+	@FindBy(name="userPwd")
+	WebElement Password;
+	@FindBy(xpath=".//*[@id='mainCnt']/div/div/form/table/tbody/tr[4]/td[2]/input")
+	WebElement Login;
+	
+	
+	@FindBy(name="txtFN")
+	WebElement FullName;
+
+	@FindBy(name="Email")
+	WebElement Email;
+
+	@FindBy(name="Phone")
+	WebElement MobileNo;
+
+	@FindBy(name="gender")
+	WebElement Gender;
+
+	@FindBy(name="city")
+	WebElement City;
+
+	@FindBy(name="state")
+	WebElement State;
+
+	@FindBy(id="txtCardholderName")
+	WebElement SubjectCategory;
+
+	@FindBy(name="debit")
+	WebElement PaperName;
+
+	@FindBy(name="cvv")
+	WebElement NoOfAuthors;
+
+	@FindBy(name="month")
+	WebElement CompanyName;
+
+	@FindBy(name="year")
+	WebElement Designation;
+
+	@FindBy(id="btnPayment")
+	WebElement ConfirmRegistration;
+	
+	
+
+	public void TypeUserName(String strUName)
+	{
+		UserName.sendKeys(strUName);
+	}
+	public void TypePassword(String strPwd)
+	{
+		Password.sendKeys(strPwd);
+	}
+	
+	public void ClickLogin()
+	{
+		Login.click();
+	}
+	public void TypeFullName(String strFName)
+	{
+		FullName.sendKeys(strFName);
+	}
+	public void TypeEmail(String strEmail)
+	{
+		Email.sendKeys(strEmail);
+	}
+	public void TypeMobileNo(String strMno)
+	{
+		MobileNo.sendKeys(strMno);
+	}
+	public void Gender()
+	{
+		Gender.click();
+	}
+	public void SelectCity(String strCity)
+	{
+		Select drpCity=new Select(City);
+		drpCity.selectByVisibleText(strCity);
+	}
+	public void SelectState(String strState)
+	{
+		Select drpState=new Select(State);
+		drpState.selectByVisibleText(strState);
+	}
+	public void TypeSubjectCategory(String strSC)
+	{
+		SubjectCategory.sendKeys(strSC);
+	}
+	public void TypePaperName(String strPN)
+	{
+		PaperName.sendKeys(strPN);
+	}
+	public void TypeNoOfAuthors(String strAuthor)
+	{
+		NoOfAuthors.sendKeys(strAuthor);
+	}
+	public void TypeCompanyName(String strCN)
+	{
+		CompanyName.sendKeys(strCN);
+	}
+	public void TypeDesignation(String strDesg)
+	{
+		Designation.sendKeys(strDesg);
+	}
+
+
+	public void ClickSubmit()
+	{
+		ConfirmRegistration.click();
+	}
+	public void LoginPageWebSite(String strUName,String strPwd,String strFName,String strEmail,String strMno,String strCity,String strState,String strSC,String strPN,String strAuthor,String strCN,String strDesg)
+	{
+		TypeUserName(strUName);
+		TypePassword(strPwd);
+		
+		ClickLogin();
+		TypeFullName(strFName);
+		TypeEmail(strEmail);
+		TypeMobileNo(strMno);
+		Gender.click();
+		SelectCity(strCity);
+		SelectState(strState);
+		TypeSubjectCategory(strSC);
+		TypePaperName(strPN);
+		TypeNoOfAuthors(strAuthor);
+		TypeCompanyName(strCN);
+		TypeDesignation(strDesg);
+		ClickSubmit();
+	}
+	/*public void PageRegisterWebSite(String strFName,String strEmail,String strMno,String strCity,String strState,String strSC,String strPN,String strAuthor,String strCN,String strDesg)
+	{
+		
+		TypeFullName(strFName);
+		TypeEmail(strEmail);
+		TypeMobileNo(strMno);
+		Gender.click();
+		SelectCity(strCity);
+		SelectState(strState);
+		TypeSubjectCategory(strSC);
+		TypePaperName(strPN);
+		TypeNoOfAuthors(strAuthor);
+		TypeCompanyName(strCN);
+		TypeDesignation(strDesg);
+		ClickSubmit();
+	}*/
+
+}

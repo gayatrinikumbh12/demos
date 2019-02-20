@@ -1,0 +1,47 @@
+package com.cg.testcases;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.cg.pages.Login;
+
+public class VerifyLogin {
+	WebDriver driver;
+	Login loginPage;
+	static String driverPath="C:\\Users\\gnikumbh\\Desktop\\Training Material\\Module-04\\chromedriver_win32\\";
+	
+	@BeforeTest
+	public void Setup()
+	{
+		System.setProperty("webdriver.chrome.driver",driverPath+"chromedriver.exe");
+		driver =new ChromeDriver();
+		driver.get("file:///C:/Users/gnikumbh/Desktop/Training%20Material/Module-04/SampleProject_VV%20AT%20M4/VV%20AT%20M4_MPT%20Sample%20Que/login.html");
+		driver.manage().window().maximize();
+	}
+	@Test
+	public void VerifyLoginRegister1()
+	{
+		loginPage=new Login(driver);
+		PageFactory.initElements(driver, loginPage);
+		loginPage.LoginPageWebSite("vrl","vrl1234","Neelima321","Neelim@gmail.com","8247866209","Chennai","Tamilnadu","Neelima321","Chemistry","2","Capgemini","Analyst");
+		//driver.navigate().to("file:///C:/Users/saidara/Desktop/LAB-10%20VnV-AutomationBatch-12th-Dec2018%E2%80%9327/Training%20Material/Module-04/SampleProject_VV%20AT%20M4/VV%20AT%20M4_MPT%20Sample%20Que/registration.html");
+	}
+	/*@Test
+	public void VerifyLoginRegister() throws InterruptedException
+	{
+		loginPage=new Login(driver);
+		PageFactory.initElements(driver, loginPage);
+		loginPage.PageRegisterWebSite("Neelima321","Neelim@gmail.com","8247866209","Chennai","Tamilnadu","Neelima321","Chemistry","2","Capgemini","Analyst");
+		Thread.sleep(10000);
+	}*/
+	@AfterTest
+	public void CloseBrowser()throws InterruptedException{
+		Thread.sleep(10000);
+		driver.quit();
+	}		
+	
+}

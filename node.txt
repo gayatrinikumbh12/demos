@@ -1,0 +1,30 @@
+C:\Users\gnikumbh>c:
+
+C:\Users\gnikumbh>cd..
+
+C:\Users>cd C:\Users\gnikumbh\Desktop\Training Material\Module-04
+
+C:\Users\gnikumbh\Desktop\Training Material\Module-04>java -Dwebdriver.chrome.driver=C:\Users\gnikumbh\Desktop\Training Material\Module-04\chromedriver_win32\chromedriver.exe -jar selenium-server-standalone-3.4.0.jar -role node -hub http://localhost:4445/grid/register
+Error: Could not find or load main class Material\Module-04\chromedriver_win32\chromedriver.exe
+
+C:\Users\gnikumbh\Desktop\Training Material\Module-04>
+C:\Users\gnikumbh\Desktop\Training Material\Module-04>java -Dwebdriver.chrome.driver="C:\Users\gnikumbh\Desktop\Training Material\Module-04\chromedriver_win32\chromedriver.exe" -jar selenium-server-standalone-3.4.0.jar -role node -hub http://localhost:4445/grid/register
+10:54:51.107 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
+10:54:51.107 INFO - Launching a Selenium Grid node
+2019-02-15 10:54:52.185:INFO::main: Logging initialized @1462ms to org.seleniumhq.jetty9.util.log.StdErrLog
+10:54:52.232 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:54:52.232 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+Unable to create new instances on this machine.
+10:54:52.232 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+10:54:52.232 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+10:54:52.232 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+ registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform WIN10
+2019-02-15 10:54:52.279:INFO:osjs.Server:main: jetty-9.4.3.v20170317
+2019-02-15 10:54:52.341:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@67a20f67{/,null,AVAILABLE}
+2019-02-15 10:54:52.373:INFO:osjs.AbstractConnector:main: Started ServerConnector@4eba0d2{HTTP/1.1,[http/1.1]}{0.0.0.0:5555}
+2019-02-15 10:54:52.373:INFO:osjs.Server:main: Started @1652ms
+10:54:52.373 INFO - Selenium Grid node is up and ready to register to the hub
+10:54:52.419 INFO - Starting auto registration thread. Will try to register every 5000 ms.
+10:54:52.419 INFO - Registering the node to the hub: http://localhost:4445/grid/register
+10:54:52.529 INFO - The node is registered to the hub and ready to use
+10:54:57.883 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
