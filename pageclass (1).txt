@@ -1,0 +1,97 @@
+package com.cg.loginPage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
+
+public class LoginPage {
+	WebDriver driver;
+	public  LoginPage(WebDriver driver)
+	{
+		this.driver=driver;
+		
+	}
+
+	@FindBy(xpath=".//*[@id='mainCnt']/div/div/form/h3/a")
+	WebElement clickhereknow;
+	@FindBy(xpath="html/body/p/a")
+	WebElement back;
+	@FindBy(name="userName")
+	WebElement Username;
+	@FindBy(name="userPwd")
+	WebElement Password;
+	
+	/*@FindBy(id="txtConfPassword")
+	WebElement ConfirmPassword;
+	@FindBy(id="txtFirstName")
+	WebElement FirstName;
+	@FindBy(id="txtLastName")
+	WebElement LastName;
+	@FindBy(name="City")
+	WebElement City;*/
+	
+	 @FindBy(xpath=".//*[@id='mainCnt']/div/div/form/table/tbody/tr[4]/td[2]/input")
+	WebElement login;
+
+	 
+	 public void clickheretoKnow() throws InterruptedException
+		{
+			clickhereknow.click();
+			Thread.sleep(5000);
+			back.click();
+			//driver.navigate().back();
+		}
+	/* public void backtoclick()
+		{
+			back.click();		
+			
+		}*/
+	public void typeUserName(String strNUname)
+	{
+		Username.sendKeys(strNUname);
+	}
+	public void typePassword(String strNPwd)
+	{
+		Password.sendKeys(strNPwd);
+	}
+	/*public void typeConfimrPassword(String strNConfirmPwd)
+	{
+		ConfirmPassword.sendKeys(strNConfirmPwd);
+	}
+	public void typeFirstName(String strNFname)
+	{
+		FirstName.sendKeys(strNFname);
+	}		
+	public void typeLastName(String strNLname)
+	{
+		LastName.sendKeys(strNLname);
+	}	
+	public void selectCity(String strNCityname)
+	{
+		Select drpcity = new Select(City);
+		
+		drpcity.selectByVisibleText(strNCityname);
+		
+
+	}	*/
+	public void Clicklogin()
+	{
+		login.click();		
+
+	}
+	public String getLoginPageTitle()
+	{
+		return driver.getTitle();
+	}	
+	public void LoginPageOnwebsite (String strNUname,String strNPwd) throws InterruptedException
+	{
+	
+	//clickheretoKnow();
+	typeUserName(strNUname);
+	typePassword(strNPwd);
+	Clicklogin();
+	}	
+	}
+
+
